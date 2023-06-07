@@ -1,0 +1,20 @@
+<main class="sticky left-0 h-screen bg-neutral-900 w-[4.5rem] flex justify-start flex-col items-center overflow-y-scroll">
+<app-bubble image="https://picsum.photos/205/205"></app-bubble>
+<div class="h-[2px] bg-neutral-800 w-8"></div>
+<div *ngFor="let element of array">
+    <app-bubble [image]="element.image"></app-bubble>
+</div>
+<section class="w-[4.5rem] py-2 flex justify-start flex-col items-center gap-2">
+    <div class="w-[4.5rem] flex justify-center relative">
+        <div [class]="'w-[3.25rem] h-[3.25rem] relative bg-neutral-800 rounded-[50%] transition-all duration-400 hover:rounded-2xl hover:bg-green-600 hover:z-0'">
+            <div class="h-[0.125rem] w-4 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] {{!focused && 'bg-green-600'}}"></div>
+            <div class="h-4 w-[0.125rem] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] {{!focused && 'bg-green-600'}}"></div>
+            <div class="h-[0.125rem] w-4 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] {{focused && 'bg-white' }}"></div>
+            <div class="h-4 w-[0.125rem] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] {{focused && 'bg-white' }}"></div>
+            <div class="h-full z-30 absolute w-full bg bg-transparent" (mouseenter)="focused = true" (mouseout)="focused = false" ></div>
+        </div>
+</div>
+</section>
+<div class="h-[2px] bg-neutral-800 w-8"></div>
+
+</main>

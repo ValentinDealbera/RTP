@@ -1,0 +1,31 @@
+<main class="sticky left-0 top-0 bg-[#282828] h-screen w-60 flex flex-col items-center overflow-y-scroll">
+<input class="w-[13.5rem] my-2.5 py-[0.1rem] border-1 border-neutral-900 rounded-sm text-[#ffffff80] bg-neutral-900" type="text">
+<div class="w-full mb-2.5 bg-neutral-900 h-[1px]"></div>
+<section class="flex flex-col gap-1">
+    <app-card [mode]="'friends'" img="../../assets/user-friends-svgrepo-com.png" text="Friends"/>
+</section>
+<section class="flex flex-col gap-1">
+    <div class="mt-4 flex flex-row justify-between">
+        <p class="text-[#ffffff80] text-sm font-medium hover:text-[#ffffff99] hover:cursor-default">DIRECT MESSAGES</p>
+        <button class="text-[#ffffff99] text-xl font-bold flex flex-col justify-center items-center h-5">+</button>
+    </div>
+    <div *ngFor="let i of friends">
+        <app-card img="{{i.img}}" text="{{i.name}}"/>
+    </div>
+</section>
+</main>
+<footer class="fixed bottom-0 w-60 bg-[#202020] h-12 flex flex-row justify-start items-center">
+    <img class="rounded-[50%] w-9 mx-2" src="https://picsum.photos/193/193" alt="https://picsum.photos/193/193">
+    <span [class]="focusedName?'text-[#ffffffb2] overflow: hidden; white-space: nowrap;' :'text-[#ffffff80] overflow: hidden; white-space: nowrap;'">Valentin Dealbera</span>
+    <!-- <button (click)="focusedMic = !focusedMic">
+        <img *ngIf="focusedMic === false" class="w-6" src="../../assets/mic-slash-svgrepo-com.svg" alt="">
+        <img *ngIf="focusedMic === true" class="w-6" src="../../assets/mic-svgrepo-com.svg" alt="">
+    </button>
+    <button class="hover:bg-neutral-700" (click)="focusedHeadPhones = !focusedHeadPhones">
+        <img *ngIf="focusedHeadPhones === false" class="w-6" src="../../assets/speaker-cross-svgrepo-com.svg" alt="">
+        <img *ngIf="focusedHeadPhones === true" class="w-6" src="../../assets/speaker-disabled-svgrepo-com.svg" alt="">
+    </button>
+    <button>
+        <img class="w-6" src="../../assets/mic-slash-svgrepo-com.svg" alt="">
+    </button> -->
+</footer>

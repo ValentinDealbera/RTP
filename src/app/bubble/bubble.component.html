@@ -1,0 +1,6 @@
+<section class="w-[4.5rem] py-2 flex justify-start flex-col items-center gap-2">
+    <div class="w-[4.5rem] flex justify-center relative">
+        <img [class]="'w-[3.25rem] rounded-[50%] transition-all duration-400 hover:rounded-2xl'" [src]="img" [alt]="'https://picsum.photos/204/204'" (mouseenter)="focused = true" (mouseout)="focused = false">
+        <div [class]=" focused === true ? 'absolute bg-white h-4 transition-all duration-400 rounded-r-lg w-1 left-0 top-[50%] -translate-y-[50%]' : 'absolute bg-transparent h-0 transition-all duration-400 rounded-r-lg w-0 left-0 top-[50%] -translate-y-[50%]'"></div>
+</div>
+</section>
