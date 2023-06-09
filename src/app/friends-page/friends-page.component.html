@@ -1,0 +1,31 @@
+<main class="w-calc overflow-x-hidden sticky left-0 top-0 bg-neutral-700 h-screen flex flex-col items-center overflow-y-scroll">
+    <section class="w-calc flex flex-row">
+        <div class="w-full h-[2.95rem] flex flex-row items-center">
+            <div class="flex flex-row gap-[1.125rem] px-4">
+                <div class="flex flex-row gap-2 mr-2">
+                    <img class="w-7 box-border" src="../../assets/user-friends-svgrepo-com.png" alt="">
+                    <span class="text-[#999999] py-0.5">Friends</span>
+                </div>
+                <span class="text-[#999999] hover:text-neutral-50 hover:bg-neutral-600 px-1.5 rounded-md py-0.5 hover:cursor-pointer" >Online</span>
+                <span class="text-[#999999] hover:text-neutral-50 hover:bg-neutral-600 px-1.5 rounded-md py-0.5 hover:cursor-pointer" >All</span>
+                <span class="text-[#999999] hover:text-neutral-50 hover:bg-neutral-600 px-1.5 rounded-md py-0.5 hover:cursor-pointer" >Pending</span>
+                <span class="text-[#999999] hover:text-neutral-50 hover:bg-neutral-600 px-1.5 rounded-md py-0.5 hover:cursor-pointer" >Blocked</span>
+                <span class="py-0.5 px-1.5 rounded-md text-neutral-50 hover:cursor-pointer bg-green-700">Add Friend</span>
+            </div>    
+        </div>
+        <div class="flex flex-row gap-5 px-4">
+            <button><img class="w-7" src="../../assets/sms-3-svgrepo-com.svg" alt=""></button>
+            <div class="w-[1px] bg-neutral-600"></div>
+            <button><img class="w-7" src="../../assets/inbox-svgrepo-com.svg" alt=""></button>
+            <button><img class="w-7" src="../../assets/question-svgrepo-com.svg" alt=""></button>
+        </div>
+    </section>
+    <div class="w-full bg-neutral-900 h-[1px]"></div>
+    <div class="w-calc h-active flex flex-row justify-end">
+        <div class="flex w-full flex-col justify-start items-center px-8">
+            <input class="rounded-lg p-1.5 bg-neutral-900 my-5 text-sm text-neutral-50 w-full" type="text">
+        </div>
+        <app-active-now></app-active-now>
+    </div>
+    </main>
+   

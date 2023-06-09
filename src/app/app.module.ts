@@ -7,6 +7,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BubbleComponent } from './bubble/bubble.component';
 import { DrawerComponent } from './drawer/drawer.component';
 import { CardComponent } from './card/card.component';
+import { FriendsPageComponent } from './friends-page/friends-page.component';
+import { ActiveNowComponent } from './active-now/active-now.component';
+import { ActiveNowCardComponent } from './active-now-card/active-now-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { CardComponent } from './card/card.component';
     SidebarComponent,
     BubbleComponent,
     DrawerComponent,
-    CardComponent
+    CardComponent,
+    FriendsPageComponent,
+    ActiveNowComponent,
+    ActiveNowCardComponent
   ],
   imports: [
     BrowserModule,

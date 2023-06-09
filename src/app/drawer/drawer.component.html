@@ -1,5 +1,5 @@
 <main class="sticky left-0 top-0 bg-[#282828] h-screen w-60 flex flex-col items-center overflow-y-scroll">
-<input class="w-[13.5rem] my-2.5 py-[0.1rem] border-1 border-neutral-900 rounded-sm text-[#ffffff80] bg-neutral-900" type="text">
+<input placeholder="Find or Start a Conversation" [value]="SearchValue" (input)="SetSearchValue($event)" class="w-[13.5rem] my-3 py-[0.1rem] border-1 border-neutral-900 rounded-sm text-[#ffffff80] text-sm p-2 bg-neutral-900" type="text">
 <div class="w-full mb-2.5 bg-neutral-900 h-[1px]"></div>
 <section class="flex flex-col gap-1">
     <app-card [mode]="'friends'" img="../../assets/user-friends-svgrepo-com.png" text="Friends"/>
@@ -14,18 +14,23 @@
     </div>
 </section>
 </main>
-<footer class="fixed bottom-0 w-60 bg-[#202020] h-12 flex flex-row justify-start items-center">
-    <img class="rounded-[50%] w-9 mx-2" src="https://picsum.photos/193/193" alt="https://picsum.photos/193/193">
-    <span [class]="focusedName?'text-[#ffffffb2] overflow: hidden; white-space: nowrap;' :'text-[#ffffff80] overflow: hidden; white-space: nowrap;'">Valentin Dealbera</span>
-    <!-- <button (click)="focusedMic = !focusedMic">
-        <img *ngIf="focusedMic === false" class="w-6" src="../../assets/mic-slash-svgrepo-com.svg" alt="">
-        <img *ngIf="focusedMic === true" class="w-6" src="../../assets/mic-svgrepo-com.svg" alt="">
-    </button>
-    <button class="hover:bg-neutral-700" (click)="focusedHeadPhones = !focusedHeadPhones">
-        <img *ngIf="focusedHeadPhones === false" class="w-6" src="../../assets/speaker-cross-svgrepo-com.svg" alt="">
-        <img *ngIf="focusedHeadPhones === true" class="w-6" src="../../assets/speaker-disabled-svgrepo-com.svg" alt="">
-    </button>
-    <button>
-        <img class="w-6" src="../../assets/mic-slash-svgrepo-com.svg" alt="">
-    </button> -->
+<footer class="fixed bottom-0 w-60 bg-[#202020] h-12 flex flex-row justify-start items-center gap-1">
+    <div class="flex relative flex-row w-32 items-center hover:bg-neutral-700 h-full text-sm">
+        <img class="rounded-[50%] w-9 mx-2" src="https://picsum.photos/205/205" alt="https://picsum.photos/193/193">
+        <div (mouseenter)="focusedName = true" (mouseout)=" focusedName = false" class="absolute w-full h-full bg-transparent z-30"></div>
+        <span [class]="focusedName?'text-[#fafafa] truncate block' :'text-[#ffffff80] truncate block;'">Valentin Dealbera</span>
+    </div>
+    <div class="flex flex-row items-center gap-1 m-1">
+        <button class="hover:bg-neutral-700 rounded-md h-9 w-7 p-0.5  box-border" (click)="focusedMic = !focusedMic">
+            <img *ngIf="focusedMic === false" class="w-6" src="../../assets/mic-off-svgrepo-com.svg" alt="">
+            <img *ngIf="focusedMic === true" class="w-6" src="../../assets/mic-svgrepo-com(1).svg" alt="">
+        </button>
+        <button class="hover:bg-neutral-700 rounded-md h-9 w-7 p-0.5  box-border" (click)="focusedHeadPhones = !focusedHeadPhones">
+            <img *ngIf="focusedHeadPhones === false" class="w-6" src="../../assets/speaker-2-svgrepo-com.svg" alt="">
+            <img *ngIf="focusedHeadPhones === true" class="w-6" src="../../assets/speaker-cross-svgrepo-com(1).svg" alt="">
+        </button>
+        <button class="hover:bg-neutral-700 rounded-md h-9 w-7 p-0.5 box-border">
+            <img class="w-6" src="../../assets/gear-svgrepo-com.svg" alt="">
+        </button>
+    </div>
 </footer>

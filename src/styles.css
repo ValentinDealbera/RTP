@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.w-calc {
+    width: calc(100vw - 312px);
+}
+
+.h-active {
+    height: calc(100vh - 48.2px);
+}

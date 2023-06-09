@@ -11,9 +11,8 @@ interface Friends{
 export class DrawerComponent {
   focusedName:boolean = false 
   focusedMic:boolean = false 
-  focusedHeadPhones:boolean = false 
-  focusedGear:boolean = false 
-  friends: Friends[] = [
+  focusedHeadPhones:boolean = false
+  allfriends: Friends[] = [
     {img:'https://picsum.photos/199/199', name:'Ripper302'},
     {img:'https://picsum.photos/198/198', name:'Blackdels'},
     {img:'https://picsum.photos/197/197', name:'Ricardo Rivas'},
@@ -21,4 +20,11 @@ export class DrawerComponent {
     {img:'https://picsum.photos/195/195', name:'RoRi3'},
     {img:'https://picsum.photos/194/194', name:'Ximox'},
   ]
+  friends: Friends[] = this.allfriends
+  SearchValue:string = ''
+  SetSearchValue(event:any) {    
+    this.SearchValue = event?.target.value
+    console.log(this.SearchValue);
+    this.friends = this.allfriends.filter((e)=> e.name.toLowerCase().includes(this.SearchValue))
+  }
 }
