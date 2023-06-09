@@ -1,0 +1,14 @@
+<main class="pb-4 -mx-4 flex flex-row justify-center">
+    <section class="w-full h-14 relative hover:bg-neutral-600 flex flex-row justify-start items-center rounded-md gap-1">
+        <img class="rounded-[50%] w-8 box-border ml-4 mr-2" src="https://picsum.photos/197/197" alt="https://picsum.photos/197/197">
+        <div>
+            <span [class]="focused?'text-[#e5e5e5] text-base' :'text-[#e5e5e5] text-base'">Ricardo ivas</span>
+            <span class="block text-[#ffffff80] text-sm">Online</span>
+        </div>
+        <div class="absolute z-20 h-full w-full rounded-md bg-transparent flex flex-row justify-end items-center gap-3 pr-4" (mouseenter)="focused = true" (mouseleave)="focused = false">
+            <div class="w-9 rounded-[50%] h-9 {{focused ? 'bg-neutral-800' : 'bg-[#353535]'}} relative"><img class="w-4 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]" src="../../assets/sms-3-svgrepo-com.svg" alt="../../assets/sms-3-svgrepo-com.svg"></div>
+            <div class="w-9 rounded-[50%] h-9 {{focused ? 'bg-neutral-800' : 'bg-[#353535]'}} relative"><img class="w-4 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]" src="../../assets/three-dots-vertical-svgrepo-com.svg" alt="../../assets/sms-3-svgrepo-com.svg"></div>
+        </div>
+
+    </section>
+</main>

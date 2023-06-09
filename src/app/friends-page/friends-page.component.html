@@ -22,8 +22,13 @@
     </section>
     <div class="w-full bg-neutral-900 h-[1px]"></div>
     <div class="w-calc h-active flex flex-row justify-end">
-        <div class="flex w-full flex-col justify-start items-center px-8">
-            <input class="rounded-lg p-1.5 bg-neutral-900 my-5 text-sm text-neutral-50 w-full" type="text">
+        <div class="flex w-full flex-col justify-start items-center px-7">
+            <input placeholder="Search" class="rounded-md py-1.5 px-3 bg-neutral-900 my-5 text-sm text-neutral-50 w-full" type="text">
+            <span class="text-neutral-50 mb-4 uppercase block w-full text-xs">online - 2</span>
+            <div class="h-0.5 w-full bg-neutral-600"></div>
+            <div class="w-full">
+                <app-friends-card></app-friends-card>
+            </div>
         </div>
         <app-active-now></app-active-now>
     </div>

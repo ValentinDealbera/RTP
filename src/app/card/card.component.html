@@ -1,6 +1,6 @@
 <main class="w-[13.5rem] h-11 relative hover:bg-neutral-700 flex flex-row justify-start items-center rounded-md gap-1">
     <img class="rounded-[50%] w-9 mx-2" src="{{img}}" alt="{{img}}">
-    <span [class]="focused?'text-[#ffffffb2]' :'text-[#ffffff80]'">{{text}}</span>
+    <span [class]="focused?'text-[#ffffffb2] text-sm' :'text-[#ffffff80] text-sm'">{{text}}</span>
     <div *ngIf="mode !== 'friends'" class="absolute z-20 h-11 w-[13.5rem] rounded-md bg-transparent" (mouseenter)="focused = true" (mouseleave)="focused = false">
         <button name="{{text}}" class="text-[#ffffffb2] absolute bottom-2.5 right-2 z-20 font-thin" *ngIf="focused">✖</button>
     </div>
